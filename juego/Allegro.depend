@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1341428669 source:c:\users\davidmendozavelis\desktop\rutina disparos\inicia.cpp
+	"inicia.h"
+	<allegro.h>
+
+1341428669 >
+
+1341428602 c:\users\davidmendozavelis\desktop\rutina disparos\inicia.h
+
+1353781732 source:c:\users\davidmendozavelis\desktop\rutina disparos\main.cpp
+	<allegro.h>
+	"inicia.h"
+
+1353781732 
+
+1341428669 source:c:\users\davidmendozavelis\desktop\rutina disparos - copia (2)\inicia.cpp
+	"inicia.h"
+	<allegro.h>
+
+1341428602 c:\users\davidmendozavelis\desktop\rutina disparos - copia (2)\inicia.h
+
+1417581658 source:/home/ubuntu/Desktop/rutina disparos - copia (2)/inicia.cpp
+	"inicia.h"
+	<allegro.h>
+
+1341428602 /home/ubuntu/Desktop/rutina disparos - copia (2)/inicia.h
+
+1417587983 source:/home/ubuntu/Desktop/rutina disparos - copia (2)/main.cpp
+	<allegro.h>
+	"inicia.h"
+
+1417590396 source:/home/ubuntu/Desktop/juego/inicia.cpp
+	"inicia.h"
+	<allegro.h>
+
+1341428602 /home/ubuntu/Desktop/juego/inicia.h
+
+1417590464 source:/home/ubuntu/Desktop/juego/main.cpp
+	<allegro.h>
+	"inicia.h"
+
+1417590396 source:c:\users\juan felipe\desktop\juego\inicia.cpp
+	"inicia.h"
+	<allegro.h>
+
+1341428602 c:\users\juan felipe\desktop\juego\inicia.h
+
+1417590526 source:c:\users\juan felipe\desktop\juego\main.cpp
+	<allegro.h>
+	"inicia.h"
+
