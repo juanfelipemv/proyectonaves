@@ -49,3 +49,13 @@
 	<allegro.h>
 	"inicia.h"
 
+1417590396 source:c:\users\juan felipe\videos\documents\github\proyectonaves\juego\inicia.cpp
+	"inicia.h"
+	<allegro.h>
+
+1341428602 c:\users\juan felipe\videos\documents\github\proyectonaves\juego\inicia.h
+
+1417590526 source:c:\users\juan felipe\videos\documents\github\proyectonaves\juego\main.cpp
+	<allegro.h>
+	"inicia.h"
+

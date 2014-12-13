@@ -10,6 +10,64 @@ struct NAVE{
     int dir;
 }nav = {250,300,1};
 
+
+void cargarInstruccion()
+{
+    while(!key[KEY_ESC]){
+                        BITMAP *buffer = create_bitmap(500,450);
+                        BITMAP *menu = load_tga("instruccion.tga",NULL);
+                        blit(menu,buffer,0,0,0,0,500,450);
+                        blit(buffer,screen,0,0,0,0,500,450);
+                        rest(5);
+                         }
+
+}
+
+void cargarmenu()
+{
+    while(!key[KEY_ESC]){
+                        BITMAP *buffer = create_bitmap(500,450);
+                        BITMAP *menu = load_tga("menu3.tga",NULL);
+                        blit(menu,buffer,0,0,0,0,500,450);
+                        blit(buffer,screen,0,0,0,0,500,450);
+                        rest(5);
+
+                         if(key[KEY_2]) {
+      cargarInstruccion();
+       }
+                         }
+
+}
+
+
+
+void cargarVictoria()
+{
+    while(!key[KEY_ESC]){
+                        BITMAP *buffer = create_bitmap(500,450);
+                        BITMAP *menu = load_tga("win.tga",NULL);
+                        blit(menu,buffer,0,0,0,0,500,450);
+                        blit(buffer,screen,0,0,0,0,500,450);
+                        rest(5);
+
+
+                         }
+
+}
+
+void cargarGameover()
+{
+    while(!key[KEY_ESC]){
+                        BITMAP *buffer = create_bitmap(500,450);
+                        BITMAP *menu = load_tga("gameover.tga",NULL);
+                        blit(menu,buffer,0,0,0,0,500,450);
+                        blit(buffer,screen,0,0,0,0,500,450);
+                        rest(5);
+                         }
+
+}
+
+
 void pintar_nave(BITMAP *nave,BITMAP *buffer,struct NAVE nav){
      masked_blit( nave, buffer, 40*nav.dir, 0, nav.x, nav.y, 40, 47);
 
@@ -35,6 +93,7 @@ int main()
     install_int_ex(inc_speed_counter, BPS_TO_TIMER(30));
 
     int i = 450 , dsw = 0 , cont = 0;
+    //cargarmenu()
     while(!key[KEY_ESC]){
         blit(nube,buffer,0,--i,0,0,500,450);
         if(i == 0)
