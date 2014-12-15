@@ -68,6 +68,22 @@ return bala_x + bala_w > asteroid_x && bala_x < asteroid_x + asteroid_w
 }
 
 
+void musicafondo(){
+ MIDI *BackGround;
+    BackGround= load_midi( "boss.mid");
+    play_midi(BackGround,true);}
+
+void explosion(){
+  SAMPLE *disparo;
+    disparo= load_sample( "explosion.wav");
+    play_sample(disparo,105,128,500,false);
+    }
+
+void disparo(){
+  SAMPLE *disparo;
+    disparo= load_sample( "tiro.wav");
+    play_sample(disparo,105,128,500,false);
+    }
 
 void juego()
 {
@@ -118,6 +134,9 @@ void juego()
 // masked_blit(asteroide,buffer,64*c,64*f,num,v,64,64);
 
     while(!key[KEY_ESC]){
+            if(key[KEY_BACKSPACE]) {
+                        break;
+                        }
         if(finallevel==true && activar==true){
   enemigos.push_back(new Asteroide(pintar,c,f,v,rand() % 500,asteroide,buffer,&enemigos));
    activar=false;
@@ -237,6 +256,7 @@ prueba+=1;
 
            if(key[KEY_SPACE]&&dsw==0){
             if(nav.ndisparos<maxdisp){
+                    disparo();
                 nav.ndisparos++;
                 disparos[nav.ndisparos].x = nav.x + 20;
                 disparos[nav.ndisparos].y = nav.y;
@@ -454,6 +474,9 @@ void cargarGameover()
                         BITMAP *menu = load_tga("gameover.tga",NULL);
     while(!key[KEY_ESC]){
 
+if(key[KEY_BACKSPACE]) {
+                        break;
+                        }
                         blit(menu,buffer,0,0,0,0,500,450);
                         blit(buffer,screen,0,0,0,0,500,450);
                         rest(5);
@@ -474,26 +497,112 @@ int main()
 {
      inicia_allegro(500,450);
     inicia_audio(70,70);
+        install_mouse();
+    install_sound (DIGI_AUTODETECT,MIDI_AUTODETECT,"A");
+    MIDI *BackGround;
+    SAMPLE *disparo;
+    disparo= load_sample( "tiro.wav");
 
+
+    BackGround= load_midi( "boss.mid");
+
+                        BITMAP *menu_0 = load_tga("menu_0.tga",NULL);
+                        BITMAP *menu_1 = load_tga("menu_1.tga",NULL);
                         BITMAP *buffer = create_bitmap(500,450);
                         BITMAP *menu = load_tga("menu3.tga",NULL);
+
+                        BITMAP *menu_2 = load_tga("menu_2.tga",NULL);
+                        BITMAP *menu_3 = load_tga("menu_3.tga",NULL);
+                        BITMAP *menu_4 = load_tga("menu_4.tga",NULL);
+                        BITMAP *cursor = load_tga("cursor.tga",NULL);
+
+
     //menu
      while(!key[KEY_ESC]){
+//
 
-                        blit(menu,buffer,0,0,0,0,500,450);
-                        blit(buffer,screen,0,0,0,0,500,450);
-                        rest(5);
 
-                         if(key[KEY_2]) {
-                        cargarInstruccion();
-                        }
-                         if(key[KEY_1]) {
-                        juego();
-                        }
-                         if(key[KEY_4]) {
 
-                       return 0;
-                        }
+     if( mouse_x >216   && mouse_x< 482  &&
+                           mouse_y > 261   && mouse_y< 288 ){
+
+                           blit(menu_1,buffer,0,0,0,0,500,450);
+                           blit(buffer,screen,0,0,0,0,500,450);
+                           rest(5);
+                           if(mouse_b & 1){
+                                             musicafondo();
+                                            juego();
+                                        }
+
+
+                                    }
+
+                           else if( mouse_x >200   && mouse_x<467  &&
+                           mouse_y > 303   && mouse_y< 331 ){
+                            blit(menu_2,buffer,0,0,0,0,500,450);
+                            blit(buffer,screen,0,0,0,0,500,450);
+                           rest(5);
+
+                            if(mouse_b & 1){
+                                    musicafondo();
+                                        cargarInstruccion();
+                                        }
+
+
+                                    }
+
+
+                           else if( mouse_x >182   && mouse_x< 450  &&
+                           mouse_y > 347   && mouse_y< 374 ){
+                            blit(menu_3,buffer,0,0,0,0,500,450);
+                            blit(buffer,screen,0,0,0,0,500,450);
+                           rest(5);
+                                if(mouse_b & 1){
+
+                                        }
+
+
+
+                           }
+
+                          else if( mouse_x >162   && mouse_x< 430  &&
+                           mouse_y > 390  && mouse_y< 419 ){
+                            blit(menu_4,buffer,0,0,0,0,500,450);
+                            blit(buffer,screen,0,0,0,0,500,450);
+                           rest(5);
+                            if(mouse_b & 1){
+                                            return 0;
+                                        }
+
+
+                           }
+
+                          else {
+                            blit(menu_0,buffer,0,0,0,0,500,450);
+                            blit(buffer,screen,0,0,0,0,500,450);
+                           rest(5);
+                          }
+
+                          masked_blit(cursor,buffer,0,0,mouse_x,mouse_y,13,22);
+                          blit(buffer,screen,0,0,0,0,500,450);
+                           rest(5);
+                            blit(cursor,buffer,0,0,0,0,500,450);
+//                        blit(menu,buffer,0,0,0,0,500,450);
+//                        blit(buffer,screen,0,0,0,0,500,450);
+//                        rest(5);
+//
+//                         if(key[KEY_2]) {
+//                        cargarInstruccion();
+//                        }
+//                         if(key[KEY_1]) {
+//                        juego();
+//                        }
+//                         if(key[KEY_4]) {
+//
+//                       return 0;
+//                        }
+
+
                         }
 
 
