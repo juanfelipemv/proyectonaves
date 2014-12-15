@@ -149,7 +149,9 @@ void juego()
         }
         blit(nube,buffer,0,--i,0,0,500,450);  if(i == 0) i=450;
         pintar_nave(nave,buffer,nav);
-int prueba=0;
+        int prueba=0;
+//ITERACION DE ASTEROIDES
+
         for(list<Enemigo*>::iterator i = enemigos.begin();
 i!=enemigos.end();
 i++){
@@ -158,11 +160,14 @@ i++){
 //    cout<<(*i)->getValorX()<<endl;
 (*i)->logic();
 
+
+
+//COLISION CON ASTEROIDE
 if(colision((*i)->getValorX(),(*i)->getValorY(),64,64,nav.x,nav.y,40,47)){
         boom();
      masked_blit(explo,buffer,64,64,nav.x,nav.y,64,64);
    cargarGameover();
- //  vidas=-1;
+
    cout<<"Colision"<<endl;
 }
 prueba+=1;
@@ -207,7 +212,7 @@ prueba+=1;
 
        ///rutina disparos///
 
-
+        ///////////DISPAROS NAVES ENEMIGAS//////////
         if(destroyed==0&&dsw==0){
             if(navmal.ndisparos<maxdisp){
                     disparo();
@@ -239,14 +244,14 @@ prueba+=1;
                         navmal.ndisparos =0;
                     }
                 }
-                //colision Disparo A NAVE principal
+                //COLISION NAVE ENEMIGA A NAVE
                 if(colision(disparosMala[cont].x,disparosMala[cont].y,4,7,nav.x,nav.y,40,47)){
                         boom();
                     disparosMala[cont]=disparosMala[navmal.ndisparos];
                     navmal.ndisparos--;
                     // masked_blit(explo,buffer,64,64,movX,movY,64,64);
                       masked_blit(explo,buffer,64,64,nav.x,nav.y,64,64);
-                      vidas-=1;
+                     vidas-=1;   //VIDAS//
                     cout<<"Colision Principal";
 //                    movX=-5;
 //                    movY=-5;

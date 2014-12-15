@@ -75,7 +75,7 @@ void Asteroide::logic()
 
         masked_blit(asteroide,buffer,64*c,64*f,num,v,64,64);
         c+=1;
-        v+=5;
+        v+=5;  //VELOCIDAD DEL ASTEROIDE
 
 }
 

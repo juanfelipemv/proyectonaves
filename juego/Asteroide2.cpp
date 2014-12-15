@@ -66,7 +66,7 @@ void Asteroide2::logic()
         if(v>=450){
             v=0;
 
-           num = rand()%450;
+           num = rand() % 450;
         }
 
 
@@ -74,7 +74,7 @@ void Asteroide2::logic()
 
         masked_blit(asteroide,buffer,64*c,64*f,num,v,64,64);
         c+=1;
-        v+=7;
+        v+=7;  //VELOCIDAD DEL ASTEROIDE
 
 }
 
