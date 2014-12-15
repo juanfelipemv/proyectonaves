@@ -65,7 +65,54 @@
 
 1418267022 c:\users\joseph\documents\github\proyectonaves\juego\inicia.h
 
-1418519904 source:c:\users\joseph\documents\github\proyectonaves\juego\main.cpp
+1418522986 source:c:\users\joseph\documents\github\proyectonaves\juego\main.cpp
 	<allegro.h>
 	"inicia.h"
+
+1418267022 source:c:\users\joseph\desktop\proyectonavescopias\juego\inicia.cpp
+	"inicia.h"
+	<allegro.h>
+
+1418267022 c:\users\joseph\desktop\proyectonavescopias\juego\inicia.h
+
+1418640881 source:c:\users\joseph\desktop\proyectonavescopias\juego\main.cpp
+	<allegro.h>
+	"inicia.h"
+	<iostream>
+	<list>
+	"Enemigo.h"
+	"Asteroide.h"
+	"Asteroide2.h"
+
+1418603787 source:c:\users\joseph\desktop\proyectonavescopias\juego\enemigo.cpp
+	"Enemigo.h"
+
+1418603787 c:\users\joseph\desktop\proyectonavescopias\juego\enemigo.h
+	<allegro.h>
+	<list>
+
+1418614572 source:c:\users\joseph\desktop\proyectonavescopias\juego\asteroide.cpp
+	"Asteroide.h"
+	<allegro.h>
+	<iostream>
+	<list>
+
+1418603463 c:\users\joseph\desktop\proyectonavescopias\juego\asteroide.h
+	<allegro.h>
+	<list>
+	"Enemigo.h"
+
+1418629727 source:c:\users\joseph\desktop\proyectonavescopias\juego\asteroide2.cpp
+	"Asteroide2.h"
+	<allegro.h>
+	<iostream>
+	<list>
+
+1418607280 c:\users\joseph\desktop\proyectonavescopias\juego\asteroide2.h
+	<allegro.h>
+	<list>
+	"Enemigo.h"
+
+1124570304 c:\users\joseph\desktop\proyectonavescopias\juego\algif.h
+	<allegro.h>
 
