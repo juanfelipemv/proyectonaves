@@ -55,14 +55,9 @@
 
 1341428602 c:\users\juan felipe\videos\documents\github\proyectonaves\juego\inicia.h
 
-1418641400 source:c:\users\juan felipe\videos\documents\github\proyectonaves\juego\main.cpp
+1417590526 source:c:\users\juan felipe\videos\documents\github\proyectonaves\juego\main.cpp
 	<allegro.h>
 	"inicia.h"
-	<iostream>
-	<list>
-	"Enemigo.h"
-	"Asteroide.h"
-	"Asteroide2.h"
 
 1418267022 source:c:\users\joseph\documents\github\proyectonaves\juego\inicia.cpp
 	"inicia.h"
@@ -120,77 +115,4 @@
 
 1124570304 c:\users\joseph\desktop\proyectonavescopias\juego\algif.h
 	<allegro.h>
-
-1418641400 source:c:\users\juan felipe\videos\documents\github\proyectonaves\juego\asteroide.cpp
-	"Asteroide.h"
-	<allegro.h>
-	<iostream>
-	<list>
-
-1418641400 c:\users\juan felipe\videos\documents\github\proyectonaves\juego\asteroide.h
-	<allegro.h>
-	<list>
-	"Enemigo.h"
-
-1418641400 c:\users\juan felipe\videos\documents\github\proyectonaves\juego\enemigo.h
-	<allegro.h>
-	<list>
-
-1418641400 source:c:\users\juan felipe\videos\documents\github\proyectonaves\juego\asteroide2.cpp
-	"Asteroide2.h"
-	<allegro.h>
-	<iostream>
-	<list>
-
-1418641400 c:\users\juan felipe\videos\documents\github\proyectonaves\juego\asteroide2.h
-	<allegro.h>
-	<list>
-	"Enemigo.h"
-
-1418641400 source:c:\users\juan felipe\videos\documents\github\proyectonaves\juego\enemigo.cpp
-	"Enemigo.h"
-
-1418641400 source:c:\users\juan felipe\desktop\copia seguridad\juegofinal\asteroide.cpp
-	"Asteroide.h"
-	<allegro.h>
-	<iostream>
-	<list>
-
-1418641400 c:\users\juan felipe\desktop\copia seguridad\juegofinal\asteroide.h
-	<allegro.h>
-	<list>
-	"Enemigo.h"
-
-1418641400 c:\users\juan felipe\desktop\copia seguridad\juegofinal\enemigo.h
-	<allegro.h>
-	<list>
-
-1418641400 source:c:\users\juan felipe\desktop\copia seguridad\juegofinal\asteroide2.cpp
-	"Asteroide2.h"
-	<allegro.h>
-	<iostream>
-	<list>
-
-1418641400 c:\users\juan felipe\desktop\copia seguridad\juegofinal\asteroide2.h
-	<allegro.h>
-	<list>
-	"Enemigo.h"
-
-1418641400 source:c:\users\juan felipe\desktop\copia seguridad\juegofinal\enemigo.cpp
-	"Enemigo.h"
-
-1417590396 source:c:\users\juan felipe\desktop\copia seguridad\juegofinal\inicia.cpp
-	"inicia.h"
-	<allegro.h>
-
-1341428602 c:\users\juan felipe\desktop\copia seguridad\juegofinal\inicia.h
-
-1418643387 source:c:\users\juan felipe\desktop\copia seguridad\juegofinal\main.cpp
-	<allegro.h>
-	"inicia.h"
-	<iostream>
-	<list>
-	"Enemigo.h"
-	"Asteroide.h"
-	"Asteroide2.h"
 
