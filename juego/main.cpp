@@ -85,6 +85,12 @@ void disparo(){
     play_sample(disparo,105,128,500,false);
     }
 
+    void boom(){
+  SAMPLE *boom;
+    boom= load_sample( "boom1.wav");
+    play_sample(boom,105,128,500,false);
+    }
+
 void juego()
 {
     BITMAP *nave = load_bitmap("nave.bmp",NULL);
@@ -153,6 +159,7 @@ i++){
 (*i)->logic();
 
 if(colision((*i)->getValorX(),(*i)->getValorY(),64,64,nav.x,nav.y,40,47)){
+        boom();
      masked_blit(explo,buffer,64,64,nav.x,nav.y,64,64);
    cargarGameover();
  //  vidas=-1;
@@ -203,6 +210,7 @@ prueba+=1;
 
         if(destroyed==0&&dsw==0){
             if(navmal.ndisparos<maxdisp){
+                    disparo();
                 navmal.ndisparos++;
                 disparosMala[navmal.ndisparos].x = movX + 45;
                 disparosMala[navmal.ndisparos].y = movY;
@@ -233,6 +241,7 @@ prueba+=1;
                 }
                 //colision Disparo A NAVE principal
                 if(colision(disparosMala[cont].x,disparosMala[cont].y,4,7,nav.x,nav.y,40,47)){
+                        boom();
                     disparosMala[cont]=disparosMala[navmal.ndisparos];
                     navmal.ndisparos--;
                     // masked_blit(explo,buffer,64,64,movX,movY,64,64);
@@ -285,6 +294,7 @@ prueba+=1;
                 }
                 //colision Disparo A NAVE enemiga
                 if(colision(disparos[cont].x,disparos[cont].y,4,7,movX,movY,59,48)){
+                        boom();
                     if(destroyed==0)
                      masked_blit(explo,buffer,64,64,movX,movY,64,64);
                     cout<<"Colision";
@@ -500,9 +510,9 @@ int main()
         install_mouse();
     install_sound (DIGI_AUTODETECT,MIDI_AUTODETECT,"A");
     MIDI *BackGround;
-    SAMPLE *disparo;
+    SAMPLE *disparo, *boom;
     disparo= load_sample( "tiro.wav");
-
+    boom = load_sample("boom1.wav");
 
     BackGround= load_midi( "boss.mid");
 
